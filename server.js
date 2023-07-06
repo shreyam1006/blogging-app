@@ -1,7 +1,7 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
-const db = require("./models");
-const userRoutes = require("./routes/userRoutes");
+const db = require("./src/models");
+const userRoutes = require("./src/routes/userRoutes");
 
 const PORT = process.env.PORT || 8080;
 
