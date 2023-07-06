@@ -1,15 +1,10 @@
-//importing modules
 const express = require("express");
-const sequelize = require("sequelize");
-const dotenv = require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const db = require("./models");
 const userRoutes = require("./routes/userRoutes");
 
-//setting up your port
 const PORT = process.env.PORT || 8080;
 
-//assigning the variable app to express
 const app = express();
 
 //middleware

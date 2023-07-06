@@ -1,15 +1,11 @@
-//importing modules
 const { Sequelize, DataTypes } = require("sequelize");
 
-//Database connection with dialect of postgres specifying the database we are using
-//port for my database is 5433
-//database name is discover
 const sequelize = new Sequelize("blogging-app", "postgres", "postgres", {
   host: "localhost",
   dialect: "postgres",
 });
 
-//checking if connection is done
+//checking connection
 sequelize
   .authenticate()
   .then(() => {
@@ -23,8 +19,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-//connecting to model
 db.users = require("./userModel")(sequelize, DataTypes);
 
-//exporting the module
 module.exports = db;
